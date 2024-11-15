@@ -37,15 +37,21 @@ def start_game():
                 incorrect_guess += 1
                 print('Incorrect, guess lower')
     print(f'You took {incorrect_guess} try to get it right.')
+    question = input('Would you like to play again [y]es/[n]o? ')
+
+    play_again(question)
+
+
+
+def play_again(answer):
+    if answer.lower() == 'y':
+        start_game()
+    else:
+        print('Thanks for playing')
+
 
 # start the game
 start_game()
 
-play_again = input('Would you like to play again [y]es/[n]o? ')
-if play_again.lower() == 'y':
-    start_game()
-else:
-    print('Thanks for playing')
-    break
-    
+  
 
